@@ -2,6 +2,7 @@ version: "2.4"
 
 services:
   odoo:
+    image: docker.io/marionumza/do-cetmix:17.0
     build:
       context: ./odoo
       args:
@@ -14,7 +15,6 @@ services:
       PGDATABASE: &dbname prod
       PGUSER: &dbuser "odoo"
       PROXY_MODE: "true"
-      LIST_DB: "true"
     tty: true
     volumes:
       - filestore:/var/lib/odoo:z
