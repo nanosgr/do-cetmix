@@ -59,3 +59,12 @@
   target: ingadhoc $ODOO_VERSION
   merges:
     - ingadhoc $ODOO_VERSION
+
+./cetmix-cetmix-tower:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    cetmix: https://github.com/cetmix/cetmix-tower.git
+  target: cetmix $ODOO_VERSION
+  merges:
+    - cetmix $ODOO_VERSION
