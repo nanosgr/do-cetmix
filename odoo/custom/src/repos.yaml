@@ -1,0 +1,61 @@
+# See https://github.com/Tecnativa/doodba#optodoocustomsrcreposyaml
+./odoo:
+  defaults:
+    # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
+    # You may need a bigger depth when merging PRs (use $DEPTH_MERGE
+    # for a sane value of 100 commits)
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ocb: https://github.com/OCA/OCB.git
+    odoo: https://github.com/odoo/odoo.git
+    openupgrade: https://github.com/OCA/OpenUpgrade.git
+  target: odoo $ODOO_VERSION
+  merges:
+    - odoo $ODOO_VERSION
+    # Example of a merge of the PR with the number <PR>
+    # - oca refs/pull/<PR>/head
+    
+./ingadhoc-odoo-argentina:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/odoo-argentina.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION    
+    
+./ingadhoc-account-invoicing:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/account-invoicing.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION    
+    
+./ingadhoc-account-financial-tools:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/account-financial-tools.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION    
+    
+./ingadhoc-account-payment:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/account-payment.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION    
+    
+./ingadhoc-odoo-argentina-ce:
+  defaults:
+    depth: $DEPTH_DEFAULT
+  remotes:
+    ingadhoc: https://github.com/ingadhoc/odoo-argentina-ce.git
+  target: ingadhoc $ODOO_VERSION
+  merges:
+    - ingadhoc $ODOO_VERSION
