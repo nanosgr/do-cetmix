@@ -44,7 +44,7 @@ services:
     networks:
       default:
         aliases:
-          - "do-cetmix-17-0-prod-db"
+          - "do-cetmix-17-0-test-db"
     restart: unless-stopped
 
   smtp:
