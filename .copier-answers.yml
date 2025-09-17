@@ -5,7 +5,7 @@ backup_dst: ""
 cidr_whitelist: null
 domains_prod:
   - hosts:
-      - gestion.vikingosoftware.com/
+      - gestion.vikingosoftware.com
 domains_test: null
 gitlab_url: ""
 odoo_dbfilter: ^prod
